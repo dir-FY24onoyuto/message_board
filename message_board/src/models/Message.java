@@ -60,7 +60,7 @@ public class Message {
         this.content = content;
     }
     
-    public Timestamp getCretated_at() {
+    public Timestamp getCreated_at() {
         return created_at;
     }
     
