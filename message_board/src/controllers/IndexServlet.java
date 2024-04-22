@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import javax.persistence.EntityManager;
 import models.Message;
-import utils.DButil;
+import utils.DBUtil;
 
 /**
  * Servlet implementation class IndexServlet
@@ -31,7 +31,7 @@ public class IndexServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		EntityManager em = DButil.createEntityManager();
+		EntityManager em = DBUtil.createEntityManager();
 		
 		List<Message>messages = em.createNamedQuery("getAllMessages", Message.class).getResultList();
 		

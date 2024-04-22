@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import models.Message;
-import utils.DButil;
+import utils.DBUtil;
 
 /**
  * Servlet implementation class ShowServlet
@@ -30,7 +30,7 @@ public class ShowServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    var em = DButil.createEntityManager();
+	    var em = DBUtil.createEntityManager();
 	    
 	    //該当のIDのメッセージ1件のみをデータベースから取得
 	    var m = em.find(Message.class, Integer.parseInt(request.getParameter("id")));
