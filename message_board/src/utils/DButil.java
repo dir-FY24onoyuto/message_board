@@ -15,7 +15,7 @@ public class DButil {
     
     private static EntityManagerFactory getEntityManagerFactory() {
         if(emf == null) {
-            emf = Persistence.createEntityManagrFactory(PERSISTENCE_UNIT_NAME);
+            emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
             
         }
         
